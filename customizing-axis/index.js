@@ -53,7 +53,7 @@ const render = (data) => {
             .attr('font-size', '0.8em')
             .attr('transform', `translate(${0}, ${innerHeight})`)
             .select('.domain')
-                .remove()
+                .remove() 
 
         
     // console.log(yScale.domain())
