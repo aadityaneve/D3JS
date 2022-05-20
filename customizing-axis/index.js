@@ -39,6 +39,8 @@ const render = (data) => {
         // yAxis(group.append('g'))
         group.append('g').call(yAxis)
         .attr('font-size', '1.1em')
+        .selectAll('.domain, .tick line')
+            .remove()
 
     const xAxisTickFormat = number => 
         format('.3s')(number)
@@ -50,6 +52,8 @@ const render = (data) => {
         group.append('g').call(xAxis)
             .attr('font-size', '0.8em')
             .attr('transform', `translate(${0}, ${innerHeight})`)
+            .select('.domain')
+                .remove()
 
         
     // console.log(yScale.domain())
